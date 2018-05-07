@@ -1,0 +1,226 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    overflow: hidden;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+button {
+    position: relative;
+}
+
+textarea {
+    tab-size: 4;
+    white-space: pre;
+    word-wrap: normal;
+}
+
+    textarea.success {
+        border-color: #8b8 !important;
+    }
+
+    textarea.fail {
+        border-color: #f00 !important;
+        background-color: rgba(255,0,0,0.05);
+    }
+
+textarea, input {
+    outline: none;
+}
+/* osx */
+
+.Panel {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    /* No support for these yet */
+    -o-user-select: none;
+    user-select: none;
+}
+
+/* CodeMirror */
+
+.CodeMirror {
+    position: absolute !important;
+    top: 37px;
+    width: 100% !important;
+    height: calc(100% - 37px) !important;
+}
+
+    .CodeMirror .errorLine {
+        background: rgba(255,0,0,0.25);
+    }
+
+    .CodeMirror .esprima-error {
+        color: #f00;
+        text-align: right;
+        padding: 0 20px;
+    }
+
+/* outliner */
+
+#outliner .option {
+    border: 1px solid transparent;
+}
+
+    #outliner .option.drag {
+        border: 1px dashed #999;
+    }
+
+    #outliner .option.dragTop {
+        border-top: 1px dashed #999;
+    }
+
+    #outliner .option.dragBottom {
+        border-bottom: 1px dashed #999;
+    }
+
+#outliner .type {
+    position: relative;
+    top: -2px;
+    padding: 0 2px;
+    color: #ddd;
+}
+
+    #outliner .type:after {
+        content: '■';
+    }
+
+#outliner .Scene {
+    color: #ccccff;
+}
+
+#outliner .Object3D {
+    color: #aaaaee;
+}
+
+#outliner .Mesh {
+    color: #8888ee;
+}
+
+#outliner .Line {
+    color: #88ee88;
+}
+
+#outliner .LineSegments {
+    color: #88ee88;
+}
+
+#outliner .Points {
+    color: #ee8888;
+}
+
+#outliner .ObjectModel {
+    color: #00bebe;
+}
+
+#outliner .type.ObjectModel:after {
+    content: '★';
+}
+
+.linkbutton {
+    cursor: pointer;
+    color: royalblue;
+    line-height: 16px;
+    transition: 0.1s;
+}
+
+#outliner .option .linkbutton {
+    opacity: 0.0;
+    transition: 0.1s;
+    margin-left: 4px;
+}
+
+#outliner .option:hover .linkbutton {
+    opacity: 1.0;
+    transition: 0.1s;
+}
+
+
+.pullright {
+    float: right;
+}
+
+#tempscript {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    right: 300px;
+    bottom: 32px;
+    opacity: 0.9;
+}
+
+#tempscript button.Button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 6px 20px;
+    transition: 0.1s;
+}
+
+#tempscript button.Button:hover {
+    transition: 0.1s;
+    background-color: white;
+    color: black;
+}
+
+/* */
+
+#outliner .PointLight {
+    color: #dddd00;
+}
+
+/* */
+
+#outliner .Geometry {
+    color: #88ff88;
+}
+
+#outliner .BoxGeometry {
+    color: #bbeebb;
+}
+
+#outliner .TorusGeometry {
+    color: #aaeeaa;
+}
+
+/* */
+
+#outliner .Material {
+    color: #ff8888;
+}
+
+#outliner .MeshPhongMaterial {
+    color: #ffaa88;
+}
+
+/* */
+
+#outliner .Script:after {
+    content: '{...}' /* ❮/❯ */
+}
+
+.menu > .title.colcount-2 + .options {
+    width: 420px !important;
+}
+
+    .menu > .title.colcount-2 + .options > .option {
+        float: left;
+        width: calc(50% - 22px);
+    }
+
+        .menu > .title.colcount-2 + .options > .option.row {
+            float: none;
+            width: calc(100% - 20px);
+        }
+
+    .menu > .title.colcount-2 + .options > .HorizontalRule {
+        float: left;
+        width: 100%;
+    }
